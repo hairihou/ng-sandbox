@@ -1,1 +1,19 @@
-<h1>Home</h1>
+<mat-toolbar>
+  <button mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>{{ title }}</span>
+  <span class="spacer"></span>
+  <button mat-icon-button>
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-button-toggle-group [value]="buttonToggles[0].value">
+  <mat-button-toggle
+    [value]="buttonToggle.value"
+    (change)="onButtonToggleChanged($event)"
+    *ngFor="let buttonToggle of buttonToggles"
+    >{{ buttonToggle.label }}</mat-button-toggle
+  >
+</mat-button-toggle-group>
