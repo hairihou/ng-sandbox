@@ -1,3 +1,2 @@
-**/package-lock.json
-**/pnpm-lock.yaml
-**/public
+public
+package-lock.json
